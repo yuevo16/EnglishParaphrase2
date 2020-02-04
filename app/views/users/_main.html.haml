@@ -1,0 +1,9 @@
+.main
+  .main__container
+    .main__container__title
+      タイトル
+    .main__container__menu
+      = link_to new_paraphrase_path, class: 'main__container__menu__go' do
+        go
+      = link_to paraphrases_path, class: 'main__container__menu__past' do
+        past

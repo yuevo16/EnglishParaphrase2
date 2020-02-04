@@ -1,0 +1,48 @@
+.new_sentence {
+  background-color: yellowgreen;
+  height: 100vh;
+  width: 100vw;
+  &__main {
+    background-color: darkturquoise;
+    height: 100vh;
+    width: 800px;
+    margin: auto;
+    &__theme {
+      background-color: dimgray;
+      height: 350px;
+      width: 750px;
+      margin: auto;
+      &__header {
+        background-color: lightblue;
+        height: 50px;
+      }
+      &__body {
+        background-color: lightgreen;
+        height: 200px;
+        &__text {
+          background-color: lightpink;
+          height: 180px;
+          width: 700px;
+          margin: auto;
+        }
+        &__hint {
+          background-color: lightsalmon;
+          height: 120px;
+          
+        }
+      }
+    }
+    &__image {
+      background-color: dodgerblue;
+      height: 100px;
+      width: 750px;
+      margin: auto;
+    }
+    &__answer {
+      background-color: indianred;
+      height: calc(100vh - 450px);
+      width: 750px;
+      margin: auto;
+    }
+  }
+}

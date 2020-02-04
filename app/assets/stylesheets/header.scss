@@ -1,0 +1,72 @@
+.header {
+  background-color: rosybrown;
+  height: 120px;
+  width: 100vw;
+  &__container {
+    height: 90px;
+    width: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    &__nickname {
+      background-color: red;
+      height: 95px;
+      width: 200px;
+      text-align: center;
+      line-height: 6em;
+    }
+    &__phrase {
+      background-color: yellow;
+      height: 95px;
+      width: 300px;
+      text-align: center;
+      line-height: 5em;
+      &__info {
+        background-color: blueviolet;
+        height: 30px;
+        line-height: 2em;
+      }
+      &__text {
+        background-color: chartreuse;
+        height: 65px;
+        line-height: 4em;
+      }
+    }
+    &__mypage {
+      background-color: burlywood;
+      height: 80px;
+      width: 260px;
+      &__button {
+        background-color: cadetblue;
+        display: block;
+        height: 40px;
+        width: 120px;
+        text-align: center;
+        margin: auto;
+        line-height: 2rem;
+      }
+    }
+    &__auth {
+      background-color: blue;
+      height: 95px;
+      width: 280px;
+      text-align: center;
+      line-height: 2.5em;
+      &__signup {
+        background-color: silver;
+        display: inline-block;
+        height: 40px;
+        width: 120px;
+        margin-top: 30px;
+      }
+      &__signin {
+        background-color: aqua;
+        height: 40px;
+        width: 120px;
+        float: right;
+        margin-right: 10px;
+        margin-top: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.header
+  .header__container
+    .header__container__nickname
+      name
+    .header__container__phrase
+      .header__container__phrase__info
+        Today's phrase
+      .header__container__phrase__text
+        日替わり
+    - if user_signed_in?
+      .header__container__mypage
+        = link_to "mypage", root_path, class: "header__container__mypage__button" 
+    - else
+      .header__container__auth
+        = link_to "Sign up", new_user_registration_path, class: "header__container__auth__signup" 
+        = link_to "Sign in", new_user_session_path, class: "header__container__auth__signin" 

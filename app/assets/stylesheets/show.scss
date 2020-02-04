@@ -1,0 +1,25 @@
+.show_sentence {
+  background-color: chocolate;
+  height: 100vh;
+  width: 100vw;
+  &__main {
+    background-color: cornflowerblue;
+    height: 100vh;
+    width: 80vw;
+    margin: auto;
+    &__content {
+      background-color: wheat;
+      height: 300px;
+      width: 500px;
+      margin: auto;
+      &__theme {
+        background-color: white;
+        height: 60px;
+      }
+      &__phrase {
+        background-color: yellow;
+        height: 240px
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.new_sentence
+  new phrase
+  = form_with model: @paraphrase, local: true, class: 'new_sentence__main' do |f|
+    .new_sentence__main__theme
+      .new_sentence__main__theme__header
+        1/3問
+      .new_sentence__main__theme__body
+        .new_sentence__main__theme__body__text
+          = @theme.question
+        .new_sentence__main__theme__body__hint
+          ヒント
+    .new_sentence__main__image
+      ↓
+    .new_sentence__main__answer
+      .new_sentence__main__answer__header
+        = f.text_field :answer, type: "text", placeholder:"paraphrase?", class: "new_sentence__main__answer__header__text"
+      .new_sentence__main__answer__body
+        = f.submit "OK!" ,class: "new_sentence__main__answer__body__button" 
+
+

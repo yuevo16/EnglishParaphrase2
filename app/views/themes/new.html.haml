@@ -1,0 +1,7 @@
+= render "users/header"
+= form_with model: @theme, local: true, class: 'add' do |f|
+  .add__main
+    .add__main__top
+      = f.text_field :question, type: "text", placeholder:"theme?", class: "add__main__top__input"
+    .add__main__buttom
+      = f.submit "OK!" ,class: "add__main__buttom__buttom" 

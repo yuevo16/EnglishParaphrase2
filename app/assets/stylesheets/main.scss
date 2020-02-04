@@ -1,0 +1,43 @@
+.main {
+  background-color: darkgray;
+  height: calc(100vh - 120px);
+  width: 100vw;
+  &__container {
+    background-color: darkgreen;
+    height: calc(100vh - 120px);
+    width: 80vw;
+    margin: auto;
+    position: relative;
+    &__title {
+      background-color: darkorange;
+      height: 150px;
+      width: 800px;
+      margin: auto;
+      text-align: center;
+      line-height: 8rem;
+    }
+    &__menu {
+      background-color: darkviolet;
+      height: 150px;
+      width: 100%;
+      bottom: 0;
+      position: absolute;
+      text-align: center;
+      line-height: 3rem;
+      &__go {
+        background-color: deepskyblue;
+        height: 50px;
+        width: 300px;
+        margin: auto;
+        margin-top: 20px;
+      }
+      &__past {
+        background-color: yellowgreen;
+        height: 50px;
+        width: 300px;
+        margin: auto;
+        margin-top: 20px;
+      }
+    }
+  }
+}
