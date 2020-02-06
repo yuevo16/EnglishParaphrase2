@@ -12,11 +12,10 @@
 |------|----|-------|
 |question|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
-|paraphrase_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - has_many :paraphrase
-## paraphraseテーブル
+## paraphrasesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |answer|string|null: false|
@@ -25,3 +24,12 @@
 ### Association
 - belongs_to :user
 - belongs_to :theme
+## commentsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|comment|string|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|paraphrase_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :user
+- belongs_to :paraphrase

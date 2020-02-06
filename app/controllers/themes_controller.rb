@@ -1,6 +1,11 @@
 class ThemesController < ApplicationController
   def new
+    if user_signed_in?
+      user = User.find(current_user[:id])
+      @nickname = user.nickname
+    end
     @theme = Theme.new
+    @themes = Theme.order("RAND()").limit(1)
   end
 
   def create

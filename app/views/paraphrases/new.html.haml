@@ -6,7 +6,7 @@
         1/3問
       .new_sentence__main__theme__body
         .new_sentence__main__theme__body__text
-          = @theme.question
+          = @themes[0].question
         .new_sentence__main__theme__body__hint
           ヒント
     .new_sentence__main__image
@@ -14,6 +14,7 @@
     .new_sentence__main__answer
       .new_sentence__main__answer__header
         = f.text_field :answer, type: "text", placeholder:"paraphrase?", class: "new_sentence__main__answer__header__text"
+        = f.hidden_field :theme_id, value: "#{@themes[0].id}"
       .new_sentence__main__answer__body
         = f.submit "OK!" ,class: "new_sentence__main__answer__body__button" 
 

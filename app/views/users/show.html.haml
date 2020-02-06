@@ -1,0 +1,15 @@
+= render "header"
+.mypage
+  マイページです
+  .mypage__logout
+    = link_to "ログアウト", destroy_user_session_path, method: :delete
+  .mypage__main
+    - @theme.each do |theme|
+      .mypage__main__content
+        = link_to "more👉", paraphrase_path(theme), class: "button"
+        .mypage__main__content__theme
+          = theme.question
+        .mypage__main__content__phrase
+          - theme.paraphrases.each do |paraphrase|
+            .mypage__main__content__phrase__text
+              = paraphrase.answer

@@ -3,7 +3,11 @@
     .main__container__title
       タイトル
     .main__container__menu
+    - if @themes.present?
       = link_to new_paraphrase_path, class: 'main__container__menu__go' do
         go
+      = link_to paraphrases_path, class: 'main__container__menu__past' do
+        past
+    - else
       = link_to paraphrases_path, class: 'main__container__menu__past' do
         past

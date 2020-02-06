@@ -1,0 +1,25 @@
+= render "users/header"
+.show_paraphrase
+  .show_paraphrase__main
+    = link_to "< back", paraphrases_path
+    .show_paraphrase__main__title
+    .show_paraphrase__main__content
+      .show_paraphrase__main__content__answer
+        = @paraphrase.answer
+      .show_paraphrase__main__content__comments
+        %h4 ＜コメント一覧＞
+        - if @comments
+          - @comments.each do |comment|
+            %p
+              %strong
+                = link_to comment.user.nickname, "/users/#{comment.user_id}"
+                ：
+                = comment.text
+  .show_paraphrase__comments
+    - if user_signed_in?
+      = form_with model: [@paraphrase, @comment], local: true, id: "new_comment" do |f|
+        = f.text_area :text, placeholder: "コメントする" , rows: "2", class: "textbox"
+        = f.submit "SEND", class: "form__submit"
+    - else
+      %strong
+        %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※

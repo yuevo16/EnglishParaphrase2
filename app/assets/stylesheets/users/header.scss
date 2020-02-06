@@ -8,12 +8,15 @@
     padding: 10px;
     display: flex;
     justify-content: space-between;
-    &__nickname {
+    &__logo {
       background-color: red;
       height: 95px;
       width: 200px;
       text-align: center;
       line-height: 6em;
+      .icon {
+        text-decoration: none;
+      }
     }
     &__phrase {
       background-color: yellow;
@@ -30,12 +33,22 @@
         background-color: chartreuse;
         height: 65px;
         line-height: 4em;
+        text-decoration: none;
       }
     }
     &__mypage {
       background-color: burlywood;
       height: 80px;
       width: 260px;
+      &__nickname {
+        background-color: green;
+        display: block;
+        height: 40px;
+        width: 120px;
+        text-align: center;
+        margin: auto;
+        line-height: 2.5rem;
+      }
       &__button {
         background-color: cadetblue;
         display: block;
@@ -43,7 +56,10 @@
         width: 120px;
         text-align: center;
         margin: auto;
-        line-height: 2rem;
+        line-height: 2.5rem;
+        .icon {
+          text-decoration: none;
+        }
       }
     }
     &__auth {
@@ -58,6 +74,7 @@
         height: 40px;
         width: 120px;
         margin-top: 30px;
+        text-decoration: none;
       }
       &__signin {
         background-color: aqua;
@@ -66,6 +83,7 @@
         float: right;
         margin-right: 10px;
         margin-top: 30px;
+        text-decoration: none;
       }
     }
   }

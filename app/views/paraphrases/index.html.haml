@@ -3,7 +3,13 @@
 .show_sentence
   past paraphrase
   .show_sentence__main
-    .show_sentence__main__content
-      .show_sentence__main__content__theme
-      .show_sentence__main__content__phrase
-        .show_sentence__main__content__phrase__text
+    - @themes.each do |theme|
+      .show_sentence__main__content
+        = link_to "more👉", paraphrase_path(theme), class: "button"
+        .show_sentence__main__content__theme
+          = theme.question
+        .show_sentence__main__content__phrase
+          - theme.paraphrases.each do |paraphrase|
+            .show_sentence__main__content__phrase__text
+              = paraphrase.answer
+  = paginate(@themes)

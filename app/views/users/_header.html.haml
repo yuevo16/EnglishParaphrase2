@@ -1,15 +1,21 @@
 .header
   .header__container
-    .header__container__nickname
-      name
-    .header__container__phrase
-      .header__container__phrase__info
-        Today's phrase
-      .header__container__phrase__text
-        日替わり
+    .header__container__logo
+      = link_to "English Paraphrase", root_path, class: "icon"
+    - if @themes.present?
+      .header__container__phrase
+        .header__container__phrase__info
+          Today's phrase
+        = link_to @themes[0].question, new_paraphrase_path, class: "header__container__phrase__text"
+    - else
+      .header__container__phrase
+        好きな言葉を入れてみよう
     - if user_signed_in?
       .header__container__mypage
-        = link_to "mypage", root_path, class: "header__container__mypage__button" 
+        .header__container__mypage__nickname
+          = @nickname
+        .header__container__mypage__button
+          = link_to "mypage", user_path(current_user.id), class: "icon"
     - else
       .header__container__auth
         = link_to "Sign up", new_user_registration_path, class: "header__container__auth__signup" 
