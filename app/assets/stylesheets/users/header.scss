@@ -1,7 +1,9 @@
 .header {
-  background-color: rosybrown;
+  background-color: #f6f6e9;
   height: 120px;
   width: 100vw;
+  font-family: 'Caveat', cursive;
+  text-align: center;
   &__container {
     height: 90px;
     width: auto;
@@ -9,65 +11,99 @@
     display: flex;
     justify-content: space-between;
     &__logo {
-      background-color: red;
-      height: 95px;
-      width: 200px;
-      text-align: center;
-      line-height: 6em;
+      font-size: 35px;
+      width: 280px;
+      position: relative;
+      display: inline-block;
+      font-weight: bold;
+      padding: 8px 10px 5px 10px;
+      line-height: 2.5em;
+      color: #fd5f00;
+      background: #fff1da;
+      border-bottom: solid 4px #fd5f00;
+      border-radius: 15px 15px 0 0;
+      transition: .4s;
       .icon {
         text-decoration: none;
       }
+      .icon:hover {
+        color: white;
+      }
+    }
+    &__logo:hover {
+      background: #fd5f00;
+      color: #FFF;
     }
     &__phrase {
-      background-color: yellow;
-      height: 95px;
-      width: 300px;
-      text-align: center;
-      line-height: 5em;
+      font-size: 22px;
+      width: 500px;
+      position: relative;
+      display: inline-block;
+      font-weight: bold;
+      padding: 8px 10px 5px 10px;
+      color: #005792;
+      background: #fff1da;
+      border-bottom: solid 4px #005792;
+      border-radius: 15px 15px 0 0;
+      transition: .4s;
       &__info {
-        background-color: blueviolet;
         height: 30px;
-        line-height: 2em;
       }
       &__text {
-        background-color: chartreuse;
-        height: 65px;
-        line-height: 4em;
         text-decoration: none;
+        font-size: 30px;
+      }
+      &__text:hover {
+        color: #FFF;
       }
     }
+    &__phrase:hover {
+      background: #005792;
+      color: #FFF;
+    }
     &__mypage {
-      background-color: burlywood;
-      height: 80px;
-      width: 260px;
+      font-size: 22px;
+      width: 280px;
+      position: relative;
+      display: inline-block;
+      font-weight: bold;
+      padding: 8px 10px 5px 10px;
+      color: #13334c;
+      background: #fff1da;
+      border-bottom: solid 4px #13334c;
+      border-radius: 15px 15px 0 0;
+      transition: .4s;
       &__nickname {
-        background-color: green;
-        display: block;
-        height: 40px;
-        width: 120px;
-        text-align: center;
-        margin: auto;
-        line-height: 2.5rem;
+        font-size: 20px;
       }
       &__button {
-        background-color: cadetblue;
-        display: block;
-        height: 40px;
-        width: 120px;
-        text-align: center;
-        margin: auto;
-        line-height: 2.5rem;
+        font-size: 30px;
         .icon {
           text-decoration: none;
         }
+        .icon:hover {
+          color: #FFF;
+        }
       }
     }
+    &__mypage:hover {
+      background: #13334c;
+      color: #FFF;
+    }
     &__auth {
-      background-color: blue;
-      height: 95px;
+      font-size: 22px;
       width: 280px;
+      position: relative;
+      display: inline-block;
+      font-weight: bold;
+      padding: 8px 10px 5px 10px;
+      color: #13334c;
+      background: #fff1da;
+      border-bottom: solid 4px #13334c;
+      border-radius: 15px 15px 0 0;
+      transition: .4s;
+      font-size: 28px;
       text-align: center;
-      line-height: 2.5em;
       &__signup {
         background-color: silver;
         display: inline-block;
@@ -75,6 +111,11 @@
         width: 120px;
         margin-top: 30px;
         text-decoration: none;
+        border-radius: 15px;
+      }
+      &__signup:hover {
+        background: #13334c;
+        color: #FFF;
       }
       &__signin {
         background-color: aqua;
@@ -84,7 +125,16 @@
         margin-right: 10px;
         margin-top: 30px;
         text-decoration: none;
+        border-radius: 15px;
       }
+      &__signin:hover {
+        background: #13334c;
+        color: #FFF;
+      }
+    }
+    &__auth:hover {
+      background: #13334c;
+      color: #FFF;
     }
   }
 }

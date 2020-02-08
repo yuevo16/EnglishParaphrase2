@@ -1,44 +1,118 @@
 .main {
-  background-color: darkgray;
+  font-family: 'Caveat', cursive;
   height: calc(100vh - 120px);
   width: 100vw;
   &__container {
-    background-color: darkgreen;
     height: calc(100vh - 120px);
-    width: 80vw;
     margin: auto;
-    position: relative;
     &__title {
-      background-color: darkorange;
       height: 150px;
       width: 800px;
       margin: auto;
       text-align: center;
-      line-height: 8rem;
+      line-height: 9rem;
+      font-size: 70px;
+    }
+    &__view {
+      height: calc(100vh - 580px);
+      width: 800px;
+      margin: auto;
     }
     &__menu {
-      background-color: darkviolet;
-      height: 150px;
-      width: 100%;
-      bottom: 0;
-      position: absolute;
+      height: calc(100vh - 560px);
+      width: 800px;
+      margin: auto;
       text-align: center;
       line-height: 3rem;
       &__go {
-        background-color: deepskyblue;
         height: 50px;
         width: 300px;
-        margin: auto;
-        margin-top: 20px;
+        text-align: center;
+        line-height: 3rem;
+        font-size: 30px;
+        left: 400px;
+        top: -150px;
+        position: relative;
+        display: inline-block;
+        font-weight: bold;
+        padding: 12px 0 8px;
         text-decoration: none;
+        color: #67c5ff;
+        transition: .4s;
+      }
+      &__go:before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 4px;
+        top:100%;
+        left: 0;
+        border-radius: 3px;
+        background:#67c5ff;
+        transition: .2s;
+      }
+      &__go:after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 4px;
+        top:0;
+        left: 0;
+        border-radius: 3px;
+        background:#67c5ff;
+        transition: .2s;
+      }
+      &__go:hover:before {
+        top: -webkit-calc(100% - 3px);
+        top: calc(100% - 3px);
+      }
+      &__go:hover:after {
+        top: 3px;
       }
       &__past {
-        background-color: yellowgreen;
         height: 50px;
         width: 300px;
-        margin: auto;
-        margin-top: 20px;
+        text-align: center;
+        line-height: 3rem;
+        font-size: 30px;
+        left: 400px;
+        top: -150px;
+        position: relative;
+        display: inline-block;
+        font-weight: bold;
+        padding: 12px 0 8px;
         text-decoration: none;
+        color: #67c5ff;
+        transition: .4s;
+      }
+      &__past:before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 4px;
+        top:100%;
+        left: 0;
+        border-radius: 3px;
+        background:#67c5ff;
+        transition: .2s;
+      }
+      &__past:after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 4px;
+        top:0;
+        left: 0;
+        border-radius: 3px;
+        background:#67c5ff;
+        transition: .2s;
+      }
+      &__past:hover:before {
+        top: -webkit-calc(100% - 3px);
+        top: calc(100% - 3px);
+      }
+      &__past:hover:after {
+        top: 3px;
       }
     }
   }

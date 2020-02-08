@@ -1,13 +1,14 @@
 .main
   .main__container
     .main__container__title
-      タイトル
+      English Paraphrase
+    .main__container__view
     .main__container__menu
     - if @themes.present?
       = link_to new_paraphrase_path, class: 'main__container__menu__go' do
-        go
-      = link_to paraphrases_path, class: 'main__container__menu__past' do
-        past
+        Let's paraphrase !
+      = link_to themes_path, class: 'main__container__menu__past' do
+        Past paraphrases
     - else
-      = link_to paraphrases_path, class: 'main__container__menu__past' do
+      = link_to themes_path, class: 'main__container__menu__past' do
         past

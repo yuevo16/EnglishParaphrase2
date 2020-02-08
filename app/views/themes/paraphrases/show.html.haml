@@ -1,17 +1,20 @@
 = render "users/header"
 .show_paraphrase
   .show_paraphrase__main
-    = link_to "< back", paraphrases_path
+    = link_to "< back", :back
     .show_paraphrase__main__title
     .show_paraphrase__main__content
-      .show_paraphrase__main__content__answer
-        = @paraphrase.answer
-      .show_paraphrase__main__content__comments
-        %h4 ＜コメント一覧＞
-        - if @comments
-          - @comments.each do |comment|
-            %p
-              %strong
+      .show_paraphrase__main__content__question
+        THEME is "
+        = @theme.question
+        "
+      .show_paraphrase__main__content__paraphrase
+        - @theme.paraphrases.each do |paraphrase|
+          .show_paraphrase__main__content__paraphrase__answer
+            = paraphrase.answer
+          .show_paraphrase__main__content__paraphrase__comment
+            - paraphrase.comments.each do |comment|
+              .show_paraphrase__main__content__paraphrase__comment__text
                 = link_to comment.user.nickname, "/users/#{comment.user_id}"
                 ：
                 = comment.text

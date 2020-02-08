@@ -1,0 +1,2 @@
+module Themes::SearchesHelper
+end

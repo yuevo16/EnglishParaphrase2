@@ -2,21 +2,29 @@
   .header__container
     .header__container__logo
       = link_to "English Paraphrase", root_path, class: "icon"
-    - if @themes.present?
+    - if @themes.present? && user_signed_in?
       .header__container__phrase
         .header__container__phrase__info
           Today's phrase
-        = link_to @themes[0].question, new_paraphrase_path, class: "header__container__phrase__text"
-    - else
-      .header__container__phrase
-        好きな言葉を入れてみよう
-    - if user_signed_in?
+        = link_to @themes[0].question, add_paraphrase_path(@themes[0]), class: "header__container__phrase__text"
       .header__container__mypage
         .header__container__mypage__nickname
           = @nickname
         .header__container__mypage__button
-          = link_to "mypage", user_path(current_user.id), class: "icon"
+          = link_to "My page", user_path(current_user.id), class: "icon"
+
+    - elsif user_signed_in?
+      .header__container__phrase
+        = link_to "好きな言葉を入れてみよう", new_theme_path
+      .header__container__mypage
+        .header__container__mypage__nickname
+          = @nickname
+        .header__container__mypage__button
+          = link_to "my page", user_path(current_user.id), class: "icon"
+
     - else
+      .header__container__phrase
+        登録してみよう！👉
       .header__container__auth
         = link_to "Sign up", new_user_registration_path, class: "header__container__auth__signup" 
         = link_to "Sign in", new_user_session_path, class: "header__container__auth__signin" 

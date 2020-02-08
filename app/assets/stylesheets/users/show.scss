@@ -1,4 +1,4 @@
-.show_sentence {
+.mypage {
   font-family: 'Caveat', cursive;
   background-color: chocolate;
   height: 100vh;
@@ -17,6 +17,11 @@
         font-size: 20px;
         text-decoration: none;
       }
+      .delete {
+        height: 30px;
+        font-size: 20px;
+        text-decoration: none;
+      }
       &__theme {
         background-color: white;
         height: 60px;
@@ -28,8 +33,6 @@
         font-size: 20px;
         &__text {
           border-bottom: 1px solid #eee;
-        }
-        &__comment {
         }
       }
     }
