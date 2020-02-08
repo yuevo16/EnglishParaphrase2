@@ -1,5 +1,7 @@
 .main
   .main__container
+    .main__container__background
+      .video{:autoplay => "", :loop => "", :muted => "", :playsinline => "", :src => "https://tech-dig.jp/wp/wp-content/uploads/2018/05/test.mp4"}
     .main__container__title
       English Paraphrase
     .main__container__view
@@ -10,5 +12,5 @@
       = link_to themes_path, class: 'main__container__menu__past' do
         Past paraphrases
     - else
-      = link_to themes_path, class: 'main__container__menu__past' do
-        past
+      = link_to themes_path, class: 'main__container__menu__only' do
+        Past paraphrases

@@ -6,7 +6,7 @@ class ThemesController < ApplicationController
       @nickname = user.nickname
     end
     @themes = Theme.order("RAND()").limit(1)
-    @theme = Theme.includes(:user).order("created_at DESC").page(params[:page]).per(4)
+    @theme = Theme.includes(:user).order("created_at DESC").page(params[:page]).per(3)
   end
   
   def new

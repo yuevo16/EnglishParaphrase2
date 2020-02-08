@@ -1,16 +1,5 @@
 = render "header"
-.mypage
-  マイページです
-  .mypage__logout
-    = link_to "ログアウト", destroy_user_session_path, method: :delete
-  .mypage__main
-    - @theme.each do |theme|
-      .mypage__main__content
-        = link_to "more👉", paraphrase_path(theme), class: "button"
-        = link_to "delete?", "/themes/#{theme[:id]}", method: :delete, class: "delete"
-        .mypage__main__content__theme
-          = theme.question
-        .mypage__main__content__phrase
-          - theme.paraphrases.each do |paraphrase|
-            .mypage__main__content__phrase__text
-              = paraphrase.answer
+= render "add"
+= render "themes/contents"
+.mypage_logout
+  = link_to "Log out", destroy_user_session_path, method: :delete, class: "mypage_logout__button"

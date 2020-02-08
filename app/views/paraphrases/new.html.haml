@@ -13,7 +13,7 @@
       = image_tag "BigUnder.png", size:"400x100"
     .new_sentence__main__answer
       .new_sentence__main__answer__header
-        = f.text_field :answer, type: "text", placeholder:"paraphrase?", class: "new_sentence__main__answer__header__text"
+        = f.text_field :answer, type: "text", placeholder:"  paraphrase?", class: "new_sentence__main__answer__header__text"
         = f.hidden_field :theme_id, value: "#{@themes[0].id}"
       .new_sentence__main__answer__body
         = f.submit "O K !" ,class: "new_sentence__main__answer__body__button" 

@@ -1,7 +1,8 @@
 = render "users/header"
-= form_with model: @theme, local: true, class: 'add' do |f|
-  .add__main
-    .add__main__top
-      = f.text_field :question, type: "text", placeholder:"theme?", class: "add__main__top__input"
-    .add__main__buttom
-      = f.submit "OK!" ,class: "add__main__buttom__buttom" 
+.new_theme
+  .new_theme__main
+    = form_with model: @theme, local: true, class: 'new_theme__main__content' do |f|
+      .new_theme__main__content__top
+        = f.text_field :question, type: "text", placeholder:" theme?", class: "new_theme__main__content__top__input"
+      .new_theme__main__content__buttom
+        = f.submit "O K !" ,id: "add" 

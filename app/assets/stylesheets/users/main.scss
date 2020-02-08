@@ -5,6 +5,16 @@
   &__container {
     height: calc(100vh - 120px);
     margin: auto;
+    &__background {
+      .video {
+        position: fixed;
+        top: 0;
+        bottom:0;
+        width: 100%;
+        height: 100%;
+        z-index: -9999;
+      }
+    }
     &__title {
       height: 150px;
       width: 800px;
@@ -112,6 +122,41 @@
         top: calc(100% - 3px);
       }
       &__past:hover:after {
+        top: 3px;
+      }
+
+      &__only {
+        height: 50px;
+        width: 300px;
+        text-align: center;
+        line-height: 3rem;
+        font-size: 30px;
+        left: 550px;
+        top: -150px;
+        position: relative;
+        display: inline-block;
+        font-weight: bold;
+        padding: 12px 0 8px;
+        text-decoration: none;
+        color: #67c5ff;
+        transition: .4s;
+      }
+      &__only:after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 4px;
+        top:0;
+        left: 0;
+        border-radius: 3px;
+        background:#67c5ff;
+        transition: .2s;
+      }
+      &__only:hover:before {
+        top: -webkit-calc(100% - 3px);
+        top: calc(100% - 3px);
+      }
+      &__only:hover:after {
         top: 3px;
       }
     }
