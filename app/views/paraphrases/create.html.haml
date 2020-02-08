@@ -1,8 +1,19 @@
 .result
   .result__main
     .result__main__top
-      おつかれ
+      .result__main__top__comment
+        Nice paraphrase !
+      .result__main__top__text
+        .result__main__top__text__theme
+          This time's theme
+          .question
+            = @theme.question
+        .result__main__top__text__paraphrase
+          Your paraphrase
+          .answer
+            = @paraphrase.answer
+    .result__main__body
     .result__main__list
       = link_to "more", new_paraphrase_path, class: "result__main__list__more"
-      = link_to "past", paraphrases_path, class: "result__main__list__past"
+      = link_to "past", themes_path, class: "result__main__list__past"
       = link_to "title", root_path, class: "result__main__list__title"

@@ -7,6 +7,7 @@
     - @theme.each do |theme|
       .mypage__main__content
         = link_to "more👉", paraphrase_path(theme), class: "button"
+        = link_to "delete?", "/themes/#{theme[:id]}", method: :delete, class: "delete"
         .mypage__main__content__theme
           = theme.question
         .mypage__main__content__phrase

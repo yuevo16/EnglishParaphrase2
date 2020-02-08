@@ -1,0 +1,2 @@
+module Themes::ParaphrasesHelper
+end

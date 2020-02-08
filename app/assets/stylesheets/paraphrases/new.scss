@@ -1,48 +1,69 @@
 .new_sentence {
-  background-color: yellowgreen;
-  height: 100vh;
+  font-family: 'Caveat', cursive;
+  height: calc(100vh - 120px);
   width: 100vw;
   &__main {
-    background-color: darkturquoise;
-    height: 100vh;
+    height: calc(100vh - 120px);
     width: 800px;
     margin: auto;
+    text-align: center;
     &__theme {
-      background-color: dimgray;
-      height: 350px;
+      height: 300px;
       width: 750px;
       margin: auto;
       &__header {
-        background-color: lightblue;
-        height: 50px;
+        height: 100px;
       }
       &__body {
-        background-color: lightgreen;
         height: 200px;
         &__text {
-          background-color: lightpink;
-          height: 180px;
-          width: 700px;
-          margin: auto;
+          height: 120px;
+          font-size: 50px;
+          line-height: 3em;
         }
         &__hint {
-          background-color: lightsalmon;
-          height: 120px;
-          
+          height: 80px;
         }
       }
     }
     &__image {
-      background-color: dodgerblue;
-      height: 100px;
+      height: 120px;
       width: 750px;
       margin: auto;
     }
     &__answer {
-      background-color: indianred;
-      height: calc(100vh - 450px);
+      height: calc(100vh - 550px);
       width: 750px;
       margin: auto;
+      &__header {
+        &__text {
+          height: 50px;
+          width: 600px;
+          font-size: 30px;
+        }
+      }
+      &__body {
+        height: 100px;
+        margin-top: 20px;
+        &__button {
+          width: 100px;
+          display: inline-block;
+          padding: 0.5em 1em;
+          text-decoration: none;
+          border-radius: 4px;
+          color: #ffffff;
+          background-image: linear-gradient(#6795fd 0%, #67ceff 100%);
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+          border-bottom: solid 3px #5e7fca;
+        }
+        &__button:active {
+          -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+          border-bottom: none;
+          cursor: pointer;
+        }
+      }
     }
   }
 }
