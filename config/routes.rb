@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'users#index'
   namespace :themes do
-    resources :searches, only: :index
     resources :paraphrases, only: [:show, :new, :create, :destroy], shallow: true
   end
 

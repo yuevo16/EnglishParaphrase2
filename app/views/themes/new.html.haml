@@ -2,7 +2,9 @@
 .new_theme
   .new_theme__main
     = form_with model: @theme, local: true, class: 'new_theme__main__content' do |f|
+      .new_theme__main__content__message
+        As you wish.
       .new_theme__main__content__top
         = f.text_field :question, type: "text", placeholder:" theme?", class: "new_theme__main__content__top__input"
-      .new_theme__main__content__buttom
-        = f.submit "O K !" ,id: "add" 
+      .new_theme__main__content__button
+        = f.submit "O K !" ,class: "new_theme__main__content__button__add" 
