@@ -77,3 +77,7 @@ gem 'active_hash'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'gretel'
 gem 'mini_magick'
+
+group :production do
+  gem 'unicorn', '5.4.1'
+end
