@@ -17,17 +17,26 @@ class ParaphrasesController < ApplicationController
   end
 
   def add
+    if user_signed_in?
+      user = User.find(current_user[:id])
+      @nickname = user.nickname
+    end
     @theme = Theme.find(params[:id])
     @paraphrase = Paraphrase.new
   end
 
   def create
-    @paraphrase = Paraphrase.new(sentence_params)
-    @theme = Theme.find(@paraphrase[:theme_id])
-    if @paraphrase.save
+    if user_signed_in?
+      @paraphrase = Paraphrase.new(sentence_params)
+      @theme = Theme.find(@paraphrase[:theme_id])
+      if @paraphrase.save
+      else
+        redirect_to root_path
+      end
     else
-      redirect_to root_path
+      redirect_to new_user_registration_path
     end
+    
   end
 
   private
