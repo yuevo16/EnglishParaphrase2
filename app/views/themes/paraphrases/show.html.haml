@@ -2,27 +2,32 @@
 .show_paraphrase
   .show_paraphrase__main
     = link_to "< back", :back
-    .show_paraphrase__main__title
-    .show_paraphrase__main__content
-      .show_paraphrase__main__content__question
-        THEME is "
+    .show_paraphrase__main__left
+      THEME is..
+      .show_paraphrase__main__left__theme
         = @theme.question
-        "
-      .show_paraphrase__main__content__paraphrase
+      .show_paraphrase__main__left__paraphrases
+        PARAPHRASES are..
         - @theme.paraphrases.each do |paraphrase|
-          .show_paraphrase__main__content__paraphrase__answer
+          .show_paraphrase__main__left__paraphrases__answer
+            = link_to paraphrase.user.nickname, "/users/#{paraphrase.user_id}"
+            ：
             = paraphrase.answer
-          .show_paraphrase__main__content__paraphrase__comment
-            - paraphrase.comments.each do |comment|
-              .show_paraphrase__main__content__paraphrase__comment__text
-                = link_to comment.user.nickname, "/users/#{comment.user_id}"
-                ：
-                = comment.text
-  .show_paraphrase__comments
-    - if user_signed_in?
-      = form_with model: [@paraphrase, @comment], local: true, id: "new_comment" do |f|
-        = f.text_area :text, placeholder: "コメントする" , rows: "2", class: "textbox"
-        = f.submit "SEND", class: "form__submit"
-    - else
-      %strong
-        %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+      -# = paginate(@theme.paraphrases)
+    .show_paraphrase__main__right
+      .show_paraphrase__main__right__comments
+        - @theme.paraphrases.each do |paraphrase|
+          - paraphrase.comments.each do |comment|
+            .show_paraphrase__main__right__comments__index
+              = link_to comment.user.nickname, "/users/#{comment.user_id}"
+              ：
+              = comment.text
+      .show_paraphrase__main__right__input
+        - if user_signed_in?
+          = form_with model: [@paraphrase, @comment], local: true, id: "new_comment" do |f|
+            = f.text_area :text, placeholder: "comment here" , rows: "2", class: "show_paraphrase__main__right__input__text"
+            = f.submit "SEND", class: "show_paraphrase__main__right__input__button"
+        - else
+          .show_paraphrase__main__right__input__else
+            %p You need to signup or signin for comments.
+        -# = paginate(@comment)

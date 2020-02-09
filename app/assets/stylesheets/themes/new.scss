@@ -2,60 +2,73 @@
   font-family: 'Caveat', cursive;
   height: calc(100vh - 110px);
   width: 100vw;
-  background-color: darkcyan;
   &__main {
-    width: 1000px;
+    width: 900px;
     margin: auto;
+    margin-top: 60px;
     &__content {
       height: 200px;
       padding: 0.2em 0.5em;
       background: #d6ebff;
       box-shadow: 0px 0px 0px 10px #d6ebff;
       border: dashed 2px white;
+      &__message {
+        height: 40px;
+        font-size: 25px;
+      }
       &__top {
         &__input {
+          font-size: 25px;
           height: 50px;
-          width: 800px;
+          width: 850px;
         }
       }
-    }
-    &__buttom {
-      .add{
-        background:#1AAB8A;
-        color:#fff;
-        border:none;
-        position:relative;
-        height:60px;
-        font-size:1.6em;
-        padding:0 2em;
-        cursor:pointer;
-        transition:800ms ease all;
-        outline:none;
-      }
-      .add:hover{
-        background:#fff;
-        color:#1AAB8A;
-      }
-      .add:before,add:after{
-        content:'';
-        position:absolute;
-        top:0;
-        right:0;
-        height:2px;
-        width:0;
-        background: #1AAB8A;
-        transition:400ms ease all;
-      }
-      .add:after{
-        right:inherit;
-        top:inherit;
-        left:0;
-        bottom:0;
-      }
-      .add:hover:before,add:hover:after{
-        width:100%;
-        transition:800ms ease all;
+      &__button {
+        height: 100px;
+        width: 200px;
+        margin: auto;
+        margin-top: 30px;
+        padding-left: 50px;
+        &__add{
+          background:#1AAB8A;
+          color:#fff;
+          border:none;
+          position:relative;
+          height:60px;
+          font-size:1.6em;
+          padding:0 2em;
+          cursor:pointer;
+          transition:800ms ease all;
+          outline:none;
+        }
+        &__add:hover{
+          background:#fff;
+          color:#1AAB8A;
+        }
+        &__add:before,
+        &__add:after{
+          content:'';
+          position:absolute;
+          top:0;
+          right:0;
+          height:2px;
+          width:0;
+          background: #1AAB8A;
+          transition:400ms ease all;
+        }
+        &__add:after{
+          right:inherit;
+          top:inherit;
+          left:0;
+          bottom:0;
+        }
+        &__add:hover:before,
+        &__add:hover:after{
+          width:100%;
+          transition:800ms ease all;
+        }
       }
     }
   }
 }
+
