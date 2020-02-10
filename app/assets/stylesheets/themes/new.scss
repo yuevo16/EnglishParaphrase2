@@ -2,10 +2,11 @@
   font-family: 'Caveat', cursive;
   height: calc(100vh - 110px);
   width: 100vw;
+  padding-top: 50px;
+  background-color: honeydew;
   &__main {
     width: 900px;
     margin: auto;
-    margin-top: 60px;
     &__content {
       height: 200px;
       padding: 0.2em 0.5em;

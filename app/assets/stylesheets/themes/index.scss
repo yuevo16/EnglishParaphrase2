@@ -1,14 +1,15 @@
 .theme_sentence {
   font-family: 'Caveat', cursive;
-  height: 100vh;
+  height: 170vh;
   width: 100vw;
+  background-color: honeydew;
   &__main {
-    margin: auto;
+    padding-top: 50px;
     &__content{
       height: 300px;
       width: 800px;
       margin: auto;
-      margin-top: 50px;
+      margin-bottom: 50px;
       position: relative;
       background: #fff0cd;
       box-shadow: 0px 0px 0px 5px #fff0cd;

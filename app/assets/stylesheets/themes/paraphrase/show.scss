@@ -1,8 +1,9 @@
 .show_paraphrase {
   font-family: 'Caveat', cursive;
-  height: calc(100vh - 120px);
+  height: 100vh;
   width: 100vw;
   font-size: 25px;
+  background-color: honeydew;
   &__main {
     display: flex;
     padding: 20px;
