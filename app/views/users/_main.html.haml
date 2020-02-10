@@ -1,8 +1,7 @@
 .main
   .main__container
     .main__container__background
-      .video src="sample.mp4" poster="sample.png" controls autoplay loop
-      .video{:src=>"sample.mp4", :poster=>"sample.png", :autoplay => "", :loop => "", :muted => "", :playsinline => ""}
+      = video_tag 'overhead-view.mp4', autoplay: true, muted: true, controls: true, loop:true, preload: true, class: "main__container__background__movie"
     .main__container__title
       English Paraphrase
     .main__container__view
