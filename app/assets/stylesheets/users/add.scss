@@ -6,6 +6,7 @@
   height: 160px;
   width: 160px;
   position: fixed;
+  z-index: 10;
   &__button {
     text-decoration: none;
     &__name{

@@ -13,6 +13,8 @@ class ThemesController < ApplicationController
     if user_signed_in?
       user = User.find(current_user[:id])
       @nickname = user.nickname
+    else
+      redirect_to new_user_registration_path
     end
     @theme = Theme.new
     @themes = Theme.order("RAND()").limit(1)

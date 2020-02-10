@@ -36,7 +36,8 @@ class ParaphrasesController < ApplicationController
     else
       redirect_to new_user_registration_path
     end
-    
+    images = ["savanna.jpg", "sunset.jpg", "water_house.jpg", "car_road.jpg", "forest_road.jpg", "lake.jpg", "ocean.jpg", "rail_road.jpg"]
+    @image = images.sample    
   end
 
   private

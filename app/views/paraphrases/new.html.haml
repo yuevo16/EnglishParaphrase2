@@ -7,10 +7,8 @@
       .new_sentence__main__theme__body
         .new_sentence__main__theme__body__text
           = @themes[0].question
-        .new_sentence__main__theme__body__hint
-          
-    .new_sentence__main__image
-      = image_tag "BigUnder.png", size:"400x100"
+        .new_sentence__main__theme__body__image
+          = image_tag "BigUnder.png", size:"400x100"
     .new_sentence__main__answer
       .new_sentence__main__answer__header
         = f.text_field :answer, type: "text", placeholder:"  paraphrase?", class: "new_sentence__main__answer__header__text"
