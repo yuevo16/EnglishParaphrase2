@@ -24,9 +24,9 @@ Mysql ver5.6.43
 # Usage
 ① ユーザー登録orログインをする。
   toppage → signup or signin
-② Themeを投稿する。
+- Themeを投稿する。
   toppage → PastParaphrase → Add theme?
-③ ②で投稿したThemeに対する Paraphraseを投稿する。
+- ②で投稿したThemeに対する Paraphraseを投稿する。
   toppage → Let's Paraphrase!
 ④ 過去の投稿を一覧で閲覧する
   toppage → PastParaphrase
