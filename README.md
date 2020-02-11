@@ -1,17 +1,17 @@
 # English Paraphrase
-- 「 paraphrase 」とは、難しい言葉を簡潔な表現に書き換えるとという意味です。
-- English Paraphraseは、ユーザーが英文や英単語を投稿し、それらと類似した意味で様々な表現する、そして共有するアプリです。
+- "Paraphrase" means to rewrite difficult words into concise expressions.
+- "English Paraphrase" is an application that allows users to post English sentences and English words, express them in a similar way, and share them.
 
-- ①お題と似た意味の英文や英単語を投稿します。
+- ①Post an English sentence or word with a similar meaning to the subject.
 <img width="1440" alt="readme_1" src="https://user-images.githubusercontent.com/58385156/74214566-4360ee80-4ce1-11ea-9d0b-3d75c4b21cb3.png">
 
-- ②過去のお題とその投稿一覧。
+- ②List of past themes and their posts.
 <img width="1440" alt="readme_2" src="https://user-images.githubusercontent.com/58385156/74214591-583d8200-4ce1-11ea-84c2-305f2947c1cf.png">
 
-- ③お題詳細画面でコメントを残せます。
+- ③You can leave a comment on the subject details screen.
 <img width="1440" alt="readme_3" src="https://user-images.githubusercontent.com/58385156/74214605-655a7100-4ce1-11ea-8c31-5c269be5a9e7.png">
 
-- ER図
+# ER図
 <img width="558" alt="readme_4" src="https://user-images.githubusercontent.com/58385156/74215747-802ee480-4ce5-11ea-9af6-0c5748cdcf41.png">
 
 # Dependency
@@ -19,25 +19,29 @@
 - Mysql ver5.6.43
 
 # Setup
-セットアップ方法を書く。用意するハードウェアとソフトウェアをセットアップするためのコマンドを記載する
+- $ https://github.com/yuevo16/EnglishParaphrase2.git
+- $ cd EnglishParaphrase2
+- $ rails db:create
+- $ rails db:migrate
+- $ rails s
 
 # Usage
-- ① ユーザー登録orログインをする。
-  toppage → signup or signin
-- ② Themeを投稿する。
-  toppage → PastParaphrase → Add theme?
-- ③ ②で投稿したThemeに対する Paraphraseを投稿する。
-  toppage → Let's Paraphrase!
-- ④ 過去の投稿を一覧で閲覧する
-  toppage → PastParaphrase
-- ⑤ ④の画面で各詳細ページでコメントを残すことができる。
-  toppage → PastParaphrase → comment here!
+- ① User registration or login.
+  ![241c3833dbc77d93233ceb594dc19672](https://user-images.githubusercontent.com/58385156/74222081-f851d600-4cf6-11ea-82fd-934cd0918679.gif)
 
-# License
-- This software is released under the MIT License, see LICENSE.
+- ② Submit Theme.
+  ![9287188fc15d446f0f10064d99e3fa5a](https://user-images.githubusercontent.com/58385156/74222193-45ce4300-4cf7-11ea-8838-6c09f60618e1.gif)
+
+- ③ Post Paraphrase for Theme posted in ②.
+  ![9287188fc15d446f0f10064d99e3fa5a](https://user-images.githubusercontent.com/58385156/74222295-84fc9400-4cf7-11ea-9474-1d4daeb7e1b3.gif)
+
+- ④ Browse past posts in a list.
+  ![9287188fc15d446f0f10064d99e3fa5a](https://user-images.githubusercontent.com/58385156/74222416-cab95c80-4cf7-11ea-9c9f-84e04087c258.gif)
+
+- ⑤ You can leave a comment on each detail page on screen ④.
+  ![7c6a1f77ffe3d26668987a5bb3ba7675](https://user-images.githubusercontent.com/58385156/74222566-2552b880-4cf8-11ea-82ce-71d0e7a48150.gif)
+
 
 # Authors
-- yuevo16(https://github.com/yuevo16/EnglishParaphrase2.git)
+- yuevo16(https://github.com/yuevo16/)
 
-# References
-- 参考にした情報源（サイト・論文）などの情報、リンク
