@@ -1,5 +1,19 @@
 = render "header"
 = render "add"
-= render "themes/contents"
 .mypage_logout
   = link_to "Log out", destroy_user_session_path, method: :delete, class: "mypage_logout__button"
+.theme_sentence
+  .theme_sentence__main
+    - @theme.each do |theme|
+      .theme_sentence__main__content
+        - if theme.paraphrases.present?
+          = link_to "comments here !", themes_paraphrase_path(theme), class: "theme_sentence__main__content__button"
+        - else
+          = link_to "no paraphrase...add?", add_paraphrase_path(theme), class: "theme_sentence__main__content__button"
+        = link_to 'DELETE', "/themes/#{theme.id}", method: :delete ,class: "delete"
+        .theme_sentence__main__content__theme
+          = theme.question
+        .theme_sentence__main__content__phrase
+          - theme.paraphrases.first(3).each do |paraphrase|
+            .theme_sentence__main__content__phrase__text
+              = paraphrase.answer
