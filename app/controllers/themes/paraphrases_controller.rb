@@ -9,7 +9,7 @@ class Themes::ParaphrasesController < ApplicationController
     @themes = Theme.order("RAND()").limit(1)
     @theme = Theme.find(params[:id])
     @comment = Comment.new
-    @comments = @paraphrase.comments.includes(:user)
+    @comments = @paraphrase.comments.includes(:user).order("created_at DESC").page(params[:page]).per(12)
   end
 
   def set_theme

@@ -8,16 +8,15 @@
         = @theme.question
       .show_paraphrase__main__left__paraphrases
         PARAPHRASES are..
-        - @theme.paraphrases.each do |paraphrase|
+        - @theme.paraphrases.first(10).each do |paraphrase|
           .show_paraphrase__main__left__paraphrases__answer
             = link_to paraphrase.user.nickname, "/users/#{paraphrase.user_id}"
             ：
             = paraphrase.answer
-      -# = paginate(@theme.paraphrases)
     .show_paraphrase__main__right
       .show_paraphrase__main__right__comments
         - @theme.paraphrases.each do |paraphrase|
-          - paraphrase.comments.each do |comment|
+          - paraphrase.comments.first(10).each do |comment|
             .show_paraphrase__main__right__comments__index
               = link_to comment.user.nickname, "/users/#{comment.user_id}"
               ：
@@ -30,4 +29,4 @@
         - else
           .show_paraphrase__main__right__input__else
             %p You need to signup or signin for comments.
-        -# = paginate(@comment)
+        = paginate(@comments)

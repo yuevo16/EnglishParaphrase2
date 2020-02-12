@@ -1,7 +1,9 @@
 class CommentsController < ApplicationController
   def create
     comment = Comment.create(comment_params)
-    redirect_to themes_path
+    paraphrase = Paraphrase.find(params[:paraphrase_id])
+    theme = paraphrase.theme_id
+    redirect_to themes_paraphrase_path(theme)
   end
 
   private
