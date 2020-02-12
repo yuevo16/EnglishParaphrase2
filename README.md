@@ -33,10 +33,10 @@
   ![9287188fc15d446f0f10064d99e3fa5a](https://user-images.githubusercontent.com/58385156/74222193-45ce4300-4cf7-11ea-8838-6c09f60618e1.gif)
 
 - ③ Post Paraphrase for Theme posted in ②.
-  ![9287188fc15d446f0f10064d99e3fa5a](https://user-images.githubusercontent.com/58385156/74222295-84fc9400-4cf7-11ea-9474-1d4daeb7e1b3.gif)
+  ![a3b447ccd4e221bb5a181854a7073cb1](https://user-images.githubusercontent.com/58385156/74309584-6c9b8080-4dae-11ea-876e-5770f99f05ba.gif)
 
 - ④ Browse past posts in a list.
-  ![9287188fc15d446f0f10064d99e3fa5a](https://user-images.githubusercontent.com/58385156/74222416-cab95c80-4cf7-11ea-9c9f-84e04087c258.gif)
+  ![b6f712ffa82b40fde94869d24f254c74](https://user-images.githubusercontent.com/58385156/74309676-a7051d80-4dae-11ea-9ae5-990a2b9855d0.gif)
 
 - ⑤ You can leave a comment on each detail page on screen ④.
   ![7c6a1f77ffe3d26668987a5bb3ba7675](https://user-images.githubusercontent.com/58385156/74222566-2552b880-4cf8-11ea-82ce-71d0e7a48150.gif)
